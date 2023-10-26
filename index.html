@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title th:text="${pageTitle}">Wise Guys Digital Corp</title>
+  <link rel="stylesheet" type="text/css" href="wiseguys-styles.css">
+  <link rel="icon" href="logoiwiseguys.png" type="image/x-icon">
+</head>
+
+
+<body>
+  
+  <div class="titleContainer">
+    <h1 style="font-size: 70px; font-family: 'Courier New', Courier, monospace;">WISE GUYS <span style="font-size: 25%;">digital corp</span></h1>
+    <img src="logoiwiseguys.png" alt="Logo" class="logo">
+  </div>
+
+  <div class="botones" style="position: absolute; top: 7%; right: 5%">
+    <a href="wiseguys.html" class="boton">Inicio</a>
+    <a href="acerca.html" class="boton">Acerca de Nosotros</a>
+    <a href="servicios.html" class="boton">Servicios</a>
+  </div>
+
+  <button class="contactButton" id="contactButton" onclick="showContactMenu()">Contáctanos</button>
+
+  <div class="loginForm" id="loginForm">
+    <h2>Iniciar Sesión</h2>
+    <form>
+      <label for="username">Nombre de Usuario:</label>
+      <input type="text" id="username" name="username" required><br>
+
+      <label for="password">Contraseña:</label>
+      <input type="password" id="password" name="password" required><br>
+
+      <button type="button" onclick="login()">Iniciar sesión</button>
+    </form>
+  </div>
+
+  <div class="welcomeMessage">
+    <p>Hola, <span id="welcomeUsername">[nombre de usuario]</span>. Somos tu socio ideal en el mundo del desarrollo web y marketing. Nuestro enfoque apasionado y creativo nos impulsa a crear soluciones innovadoras que impulsen tu presencia en línea y te ayuden a alcanzar tus objetivos de marketing. Ya sea que necesites un sitio web atractivo, estrategias de marketing efectivas o ambas cosas, estamos aquí para convertir tus ideas en realidad. ¡Únete a nosotros en este emocionante viaje hacia el éxito digital... </p>
+  </div>
+
+  <div class="container">
+    
+    <div class="menuOption" onclick="showResponse(1)">
+      <h3>Desarrollo web</h3>
+      <img src="desarollo web.png" alt="imagen" class="imagen">
+    </div>
+    
+    <div class="menuOption" onclick="showResponse(2)">
+      <h3>Marketing</h3>
+      <img src="marketing.png" alt="imagen" class="imagen">
+    </div>
+    
+    <div class="menuOption" onclick="showResponse(3)">
+      <h3>software</h3>
+      <img src="software.png" alt="imagen" class="imagen">
+    </div>
+
+  </div>
+
+  <div class="contactMenu" id="contactMenu">
+    <h3>Contáctanos</h3>
+    <p>¿Cómo podemos ayudarte?</p>
+    <ul>
+      <li><a href="https://chat.whatsapp.com/IBN5hkBPi0g591xRRWx3qg" target="_blank">WhatsApp</a></li>
+      <li><a href="mailto:wiseguysdigitalcorp@gmail.com">Correo Electrónico</a></li>
+      <li><a href="tel:+56942787252">Llámanos</a></li>
+    </ul>
+    <button onclick="closeContactMenu()">Cerrar</button>
+  </div>
+
+  <script>
+    
+    const loginForm = document.getElementById("loginForm");
+    const welcomeUsernameSpan = document.getElementById("welcomeUsername");
+
+    function getUsername() {
+      const username = prompt("Por favor ingresa tu nombre de usuario:");
+      if (username) {
+        welcomeUsernameSpan.textContent = username;
+      }
+    }
+
+    getUsername();
+
+    function showContactMenu() {
+      const contactMenu = document.getElementById("contactMenu");
+      contactMenu.classList.add("show");
+    }
+
+    function closeContactMenu() {
+      const contactMenu = document.getElementById("contactMenu");
+      contactMenu.classList.remove("show");
+    }
+
+    function showLoginForm() {
+      loginForm.style.display = "block";
+    }
+
+    function login
+    () {
+      const usernameInput = document.getElementById("username");
+      const passwordInput = document.getElementById("password");
+
+      if (usernameInput.value && passwordInput.value) {
+        loginForm.style.display = "none";
+        const whatsappLink = document.createElement("div");
+        whatsappLink.innerHTML = `<p>¡Bienvenido, ${usernameInput.value}! Aquí tienes el enlace de WhatsApp: <a href="https://chat.whatsapp.com/IBN5hkBPi0g591xRRWx3qg" target="_blank">Contáctanos en WhatsApp</a></p>`;
+        document.body.appendChild(whatsappLink);
+      }
+    }
+  </script>
+</body>
+</html>

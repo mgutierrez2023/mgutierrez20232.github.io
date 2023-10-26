@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title th:text="${pageTitle}">Wise Guys Digital Corp</title>
+  <link rel="stylesheet" type="text/css" href="servicios.css">
+  <link rel="icon" href="logoiwiseguys.png" type="image/x-icon">
+</head>
+
+
+<body>
+
+    <div class = "parrafos" style="position: absolute; top: 25%; left: 15%;">
+    <p>En este apartado de desarrollo web te brindamos la mejor asesoria en programacion de paginas web, enfocandonos en el uso de HTML y CSS. Todo</p>
+      esto lo lograras gracias a una gran variedad de material didactico y audiovisual que te adjuntaremos en la plataforma online.
+    </div>
+    <div class = "parrafos" style="position: absolute; top: 50%; left: 15%;">
+      <p>En Marketing te enseñamos las mejores estrategias para impulsar la visibilidad de tu marca. Diseño, estudios de mercado,</p>
+        en Wise Guys te facilitamos el camino para encontrar el exito comercial.
+      </div>
+      <div class = "parrafos" style="position: absolute; top: 75%; left: 15%;">
+        <p><span style = "font-family: bebas neue;">¿Sientes que te quedas atras en el mundo laboral y quieres abrir nuevas puertas?</span> En nuestra plataforma te brindaremos toda la ayuda</p>
+          para que aprendas a utilizar programas avanzados y no quedarte atras en esta era digital.
+        </div>
+
+  </div>
+  <div class="titleContainer">
+    <h1 style="font-size: 70px; font-family: 'Courier New', Courier, monospace;">WISE GUYS <span style="font-size: 25%;">digital corp</span></h1>
+    <img src="logoiwiseguys.png" alt="Logo" class="logo">
+  </div>
+  
+  <div class="botones" style="position: absolute; top: 7%; right: 5%">
+    <a href="wiseguys.html" class="boton">Inicio</a>
+    <a href="acerca.html" class="boton">Acerca de Nosotros</a>
+    <a href="servicios.html" class="boton">Servicios</a>
+  </div>
+  
+  <div class="container" style="position: absolute; top: 10%; left: 5%">
+    
+    <div class="menuOption" onclick="showResponse(1)">
+      <h3>Desarrollo web</h3>
+      <img src="desarollo web.png" alt="imagen" class="imagen">
+    </div>
+    
+    <div class="menuOption" onclick="showResponse(2)">
+      <h3>Marketing</h3>
+      <img src="marketing.png" alt="imagen" class="imagen">
+    </div>
+    
+    <div class="menuOption" onclick="showResponse(3)">
+      <h3>software</h3>
+      <img src="software.png" alt="imagen" class="imagen">
+    </div>
+    
+    
+
+  <button class="contactButton" id="contactButton" onclick="showContactMenu()">Contáctanos</button>
+
+
+  <div class="contactMenu" id="contactMenu">
+    <h3>Contáctanos</h3>
+    <p>¿Cómo podemos ayudarte?</p>
+    <ul>
+      <li><a href="https://chat.whatsapp.com/IBN5hkBPi0g591xRRWx3qg" target="_blank">WhatsApp</a></li>
+      <li><a href="mailto:wiseguysdigitalcorp@gmail.com">Correo Electrónico</a></li>
+      <li><a href="tel:+56942787252">Llámanos</a></li>
+    </ul>
+    <button onclick="closeContactMenu()">Cerrar</button>
+  </div>
+
+  <script>
+
+    function showContactMenu() {
+      const contactMenu = document.getElementById("contactMenu");
+      contactMenu.classList.add("show");
+    }
+
+    function closeContactMenu() {
+      const contactMenu = document.getElementById("contactMenu");
+      contactMenu.classList.remove("show");
+    }
+
+    function showLoginForm() {
+      loginForm.style.display = "block";
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,194 @@
+body {
+    background-color: #FBD24B;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 100vh;
+    margin-bottom: 5;
+    margin: 0;
+}
+
+  .titleContainer {
+    background-color: #0071BC;
+    border: 2px solid #1b1b1d;
+    color: #fff;
+    border-radius: 5px;
+    padding: 20px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 10%;
+}
+
+  .boton {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+  .boton:hover {
+    cursor: pointer;
+    background-color: #0056b3;
+}
+
+  .container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 100px;
+}
+  
+  .botones{
+    text-align: right;
+    margin-top: 20px; 
+}
+
+  .boton {
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-right: 10px; 
+}
+
+  .boton:last-child {
+    margin-right: 0;
+}
+ 
+  .boton:hover {
+    cursor: pointer;
+    background-color: #0056b3;
+}
+
+  .menuOption {
+    border: 2px solid #1b1b1d;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+  .menuOption:hover {
+    background-color: rgba(255, 255, 255, 1);
+}
+
+  .responseContainer {
+    border: 2px solid #1b1b1d;
+    padding: 10px;
+    border-radius: 5px;
+    display: none;
+    margin-top: 10px;
+    text-align: center;
+}
+
+  .logo {
+    width: 130px;
+    height: auto;
+    margin-bottom: 0px;
+    position: absolute; top: 2%; left: 1%;
+}
+
+  .imagen {
+    width: 100px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+  .welcomeMessage {
+    background-color: white;
+    border: 2px solid #1b1b1d;
+    border-radius: 5px;
+    padding: 10px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+  .contactButton {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #1b1b1d;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    z-index: 2;
+}
+
+  .loginForm {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    border: 2px solid #1b1b1d;
+    border-radius: 5px;
+    padding: 20px;
+    display: none;
+    z-index: 1;
+}
+
+  .loginForm label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+  .loginForm input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+  .loginForm button {
+    background-color: #1b1b1d;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+  .contactMenu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 300px;
+    background-color: #1b1b1d;
+    color: white;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+    z-index: 2;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+  .contactMenu.show {
+    transform: translateX(0);
+}
+
+  .contactMenu h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+  .contactMenu a {
+    color: #fff;
+    text-decoration: none;
+}
+
+  .contactMenu a:hover {
+    text-decoration: underline;
+}
